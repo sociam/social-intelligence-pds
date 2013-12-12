@@ -1,0 +1,100 @@
+
+
+\documentclass[runningheads,a4paper]{llncs}
+
+% \usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{The Future of Social is Personal: The Role of Personal Data Stores in Social Interfaces}
+
+% by Max Van Kleek, Kieron O’Hara
+
+\maketitle
+
+\section{Introduction}
+
+A key characteristic common to the various kinds of ``social intelligence'' described in this volume is one of enhanced autonomy through technological support.  Such autonomy allows constituents of a society to dynamically form new connections with others as needed, promoting a more adaptive, flexible and robust social fabric than those of traditional structures, in which efficiency lead a majority to rely on a handful of central, fixed intermediaries.  
+
+While we see technology being applied in many ways to support the kind of autonomy thus described, personal information environments is one area where it has, thus far, been used to drive a reversal in such trends, towards more centralisation. Currently, a handful of dominant platform vendors and application service providers are grappling for control over individuals' personal information archives, trying to accumulate as many users as possible before the others. This trend as business model began with the rise of so-called ``Web 2.0'', the second phase of the Web which marked by the mass generation and sharing of user-generated content; content that started with a few social network profiles and blog posts, but gradually grew to encompass the entirety of personal data people keep, from files and documents to film and music archives. Thus began a migration of personal digital artefacts off the individually-administered personal computers into various information spaces of the web.  =
+
+This process has recently started to accelerate significantly, as platform vendors have begun to provide software that deeply integrates into the personal computing platforms and devices people use, from Facebook  integration on mobile phones to operating-system level integration of Windows Skydrive and Apple's iCloud.  Such services extend the reach of Web services into the intimate digital spaces of one's personal digital devices, so that these services might manage this data as well.
+
+What are the implications of this centralisation?  Although the full consequences may not yet not be fully understood, a few are readily identifiable.  First, such delegation necessitates relinquishing some degree of control over various aspects of how this data is handled and controlled, ranging from how it is stored and represented, to how (and when) it can be accessed, as well as who has access to it.  Perhaps more significantly, it has profound implications on the future accessibility and preservation of this information, as many commodity service providers offer no longitudinal durability or accessibility guarantee for users' data- nor, in fact, any guarantees pertaining to its security.
+
+Of greater concern is the forfeiture of rights to ownership and use of the data that come with the terms of use of some of these platforms, or conversely, the implicit granting of rights to their use. Terms granting the latter are present in nearly all ``free'' cloud hosting providers, as the core means of deriving revenue. In these systems, personal user data creates value that sustains platforms; thus platforms are incentivised to try to attract and retain users long as possible.  In other words, platforms are incentivised to create a dependency environment in which they serve as the central common infrastructure.
+
+In this chapter, we contemplate a socio-technological solution to give end-user individuals back their autonomy through technological capacity to once again act as the data controllers of their personal information environments.  We first examine the needs for what such a platform through insights from the field of Personal Information Management (PIM).  Second, we conduct an analysis of existing technical platforms  that have been introduced towards meeting these needs.  Finally, the chapter concludes with a discussion of how these platforms may change the socio-economic landscape of the Web, and the ways personal data is shared, collected and handled.
+
+\section{What is a Personal Data Store?}
+
+We begin with an abstract characterisation of what a technical capability for achieving the aforementioned goal, adopting the term  \emph{personal data store} (PDS) from the Vendor Relationship Management community \cite{vrm} to refer to this collective capability. (The use of PDS in the singular is not intended to imply such a system would have to be a monolithic system, but might be realised through several or many disparate systems providing support).
+
+In order for individuals to fundamentally maintain their information over the long term, a PDS must facilitate the maintance and keeping of such data. Thus, we arrive at the following first definition of a PDS.
+
+\begin{quote}
+
+	A personal data store is a platform or service that allows individuals to manage and maintain their digital information, artefacts and assets, longitudinally, fully, and self-sufficiently, so it may be used practically when and where it is needed, without relying on external third parties. 
+
+\end{quote}
+
+This description leaves undefined the kinds of activities that might constitute ``manage'', ``maintain'', ``control fully'' or ``use'' this information, nor even what kind(s) of information we are talking about.  In order to approach a requirements analysis, thus, we must further identify the kinds of information that such a store might handle, and the specific kinds of activities that constitute ``manage'' ``maintaining'' and ``using'' them. 
+
+Fortunately, extensive studies within the field of information science and human computer interaction (HCI), particularly the research field of Personal Information Management (PIM), that have documented the information keeping and usage practices, as well as the tools they currently use to help them keep track of all of it.  We thus borrow definitions from this field, first by defining the scope of per
+
+\section{Defining Personal Data}
+
+The task of identifying the \emph{kinds of data} a person might need to keep, manage and use is a complex and daunting task.  Researchers in PIM have derived various working definitions of \emph{personal information} in order to effectively scope their field of study, and and have made progress towards potential functional classifications for kinds of personal information. One such classification by Jones et al. from \cite{kftf} is visible in Figure\ref{fig:jonestype}.
+
+\begin{table}
+\begin{tabular}{p{4cm} p{8cm}} 
+Category & Examples \\
+1. Owned/controlled by me & e.g., Email, files on our computers  \\
+2. About me	& e.g., my credit/medical history, web history \\
+3. Directed towards me & e.g., phone calls, drop ins, adverts, popups \\
+4. Sent (provided) by me & e.g.,  Emails, tweets, published reports  \\
+5. Experienced by me & e.g.,  Pages, papers, articles I’ve read \\
+6. Relevant (useful) to me	& e.g.,  Somewhere ``out there'' is the perfect vacation, house, job, lifelong mate \\
+\end{tabular}
+\caption{Jones's 6 Types of Personal Information, from \cite{kftf}}
+\label{fig:jonestype}
+\end{table}
+
+Jones takes an approach that distingushes among different kinds of information by how it relates to the individual in question; whether the individual experienced it, kept it, sent it, or received it, or whether this information refers to the individual or his or her activities.  The categories \emph{About me} and \emph{Relevant to me} are controversial because these definitions do not require individuals to be aware of the existence of the information; it thus establishes a sphere that goes beyond the scope of information experienced by the user.  We discuss the potential implications of including such information within the scope of PDSes in \emph{attentional challenges}. 
+
+\subsection{The Shape of Personal Data}
+
+At a lower level of detail, then, one might ask about the data model, its shape and, finally, its representation.  For this purpose, Jones introduces the notion of \emph{information forms} defined in terms of the tools used to manage them; e-mail is a single form because it is almost always accessed through an e-mail client, files though file management tools, blog entries using content management services (CMS) and so forth.  While this approach was well suited to the era of when apps defined singular data types, over time, as tools have become more sophisticated, they have become increasingly able to handle more diverse and complex kinds of information.  Perhaps more importantly, with the rise of Web-based tools, since all information is accessed through the singular tool of the web browser, with data often spanning multiple sites and pages, such distinctions are difficult to draw.
+
+At the lowest level, data is typically represent in terms any number of data formats, ranging from rows in database tables to various kinds of binary formats, to XML or JSON documents.  Various standards for how data are represented have essentially emerged as application writers devised formats to suit their apps in a relatively \emph{ad-hoc} manner.  The consequence of this is that the app itself is usually required for reading.
+
+Identifying the particular information forms to PDSes at any one moment involves enumerating all of the information forms commonly used, but also any that might be used in the future. 
+
+This definition of information form relies 
+
+\subsection{The Activities Around Personal Information}
+
+Once again, PIM research 
+
+\begin{table}
+\begin{tabular}{p{5cm} p{7cm}} 
+Jones \cite{jones}, Jones and Teevan \cite{jonesteevan}& Whittaker et al \cite{whittaker}\\
+\hline
+(Re)Finding &  \\
+Keeping & Keeping \\
+Meta-level activities (managing, maintaining ..) & Management \\
+ & Exploitation \\
+\end{tabular}
+\caption{Jones and Teevan vs Whittaker's categories of PIM activities}
+\label{fig:pimactivities}
+\end{table}
+
+\subsection{Data Ownership}
+
+\bibliographystyle{abbrv}
+\bibliography{webbox2012-app}
+
+\end{document}
+
