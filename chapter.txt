@@ -1,0 +1,99 @@
+The Future of Social is Personal:
+The Role of Personal Data Stores in Social Interfaces 
+
+Max Van Kleek, Kieron O’Hara
+
+Introduction
+
+Before the age of personal computing, people's most treasured posessions constituted physical goods that they acquired, created and cherished throughout their lives.  As people have come to live increasingly digitally, however, digital artefacts are also joining the collections of things that constitute people's valuable and meaningful posessions, spanning digital photos taken on family vacations, to one's first online exchanges with one's romantic partner, to the wallets containing cryptocurrencies and deeds to various kinds of property, both physical and digital.
+
+The rise of the Web marked an important transition for digital artefacts from that of the initial personal computer revolution. The shift to "Web 2.0" represented, among things, one in which the storage and management of personal digital artefacts started to move off the "personal computer" and into  information spaces on the Web, to the many and varied services offering  digital communications (messaging) capabilities, social networking, blog hosting, as well as of the many ubiquitous online "apps" for documents, photos, and other kinds of digital content. While people may still maintain a susbtantial subset of their data on their own personal computing devices, the management and maintenance of even locally stored artefacts has started to shift away from the individual to that by third party entities, ranging from apps to "cloud-based" services, such as iCloud, Dropbox or Skydrive.  This has been driven by at least two factors, the dominant one being the push from personal computing platform providers and "apps" offering the increasingly deep integration of online services within PC operating systems, and the second of the perception by individual users that such apps offer protection and improved access to their data.
+
+What this shift means is that people are becoming decreasingly the brokers of their own personal information, as they start to relegate to third parties the storage and management of their information. This, in nearly all cases, necessitates relinquishing control over various aspects of how this data is handled and controlled, ranging from how it is stored and represented, to how it can be accessed, and who has access to it.  Perhaps more significantly, it has profound implications on the future accessibility and preservation of this information, as many commodity service providers offer no longitduinal durability or accessibility guarantee for users' data- nor, in fact, any guarantees pertaining to its security.
+
+Of greater concern is the forefeiture of rights to ownership and use of the data by their individuals, as well as the implicit granting of rights of access to and use by these third parties. Such conditions are present in nearly all "free" cloud hosting providers, as these platforms derive revenue directly through the use of individuals' often very private, personal data in various ways.	In these systems, user data creates value that sustains platforms; thus platforms are incentivised to try to attract and retain users  long as possible; and and de-incentivised to support free movement and migration of users to potentially competing services and products.
+
+Connecting this discussion to the theme of this volume, a key characteristic of "social intelligence" has been enhanced individual autonomy through social, collaboration and collective action. Autonomy allows the constituents of a society to dynamically form new connections and collaborations as needed, thereby promoting decentralisation and avoiding fragility that might come about, for example, for when a society relies on a small set of centralised authorities.  Yet as mentioned earlier, this very sort of centralisation and dependence is very much taking place for individuals' personal information ecosystems, as platform vendors grapple for control over individuals' personal information archives, and at the same time make it difficult to move competing offerings.
+
+Therefore a necessary capability, we believe to pursue a solution to reversing this trend towards greater centralised control of personal information environments, which constitute the livelihood of this trend, so that individuals
+
+ a re-visitation of the fundamental properties of the Web to scope out, at the very least, an understanding of how one might give individuals greater autonomy over their personal information, and to 	exercise control, without any loss of ability to 
+
+Yet a vastly disproportionate amount of content and traffic on the Web is controlled by a comparatively very small number of dominant platform providers
+
+ the opposite of depending on a  Individual including supporting  individuals in being able to interact, transact, with whomever they choose, with a clear understanding of the implications of such interactions and relationships. In light of the increasing dependence of individuals on third-party providers for maintaing the entirity of individuals' personal data ecosystems, 
+and one in which technology can support individuals' informed choices
+
+ not one in which individuals have been tricked into becoming inextricably dependent on particular commercial service providers or entities.  Towards this, we see that 
+
+ control over their data artefacts.  This outsouricng which contrasts with many other kinds of valuable goods -- and is historically unprecedented  (?).   describe briefly how this came about not technically but due to the economic forces during the evolution of the Web and computing in general, simultaneously across sectors spanning direct marketing, credit profiling/finance, and finally, internet advertising-driven platforms .
+	personal information is quickly becoming among individuals’ most valuable assets [Odom et al, 2013 ]
+	incentive misalignment - the pervasive information brokers on the Web  have the incentives to use individuals’ personal information to profit, and incentivise individuals to use them by offering free services.  the priority for individuals however is to keep secure, safe, while engaging socially with others and having ‘fun’.  
+the implications of this misalignment for individuals , while only visible thus far in a handful of  “incidents” resulting from the perception of breach of personal privacy due to the actions benefitting the brokers at hand, extend  to uncertainty as the quantity and quality (fidelity and completeness) of these data continues to increase exponentially
+
+Personal Data Stores 
+The notion of a personal data store is simply shifting responsibilities of data brokerage and management  to the end-user citizen(s) who “own” the data, to whom the data is most valuable. 
+
+**(Kieron)** useful definition of the ideal functionality of PDSs from Ctrl-Shift a while ago which we might plagiarise or even critique, depending on how much of it we want to use. So, according to them, a PDS user can:
+1. manage their personal info
+2. create an integrated view of their activities
+3. verify identity
+4. share data selectively
+5. better manage info as a tool
+6. use analytics to spot trends
+7. communicate and share opinions
+8. set priorities and planning for life events
+Now, I think that’s a pretty good list, but also your paper on the topic - was it the Indx paper? - I thought had an excellent discussion of the desiderata for a PDS.
+
+**(Kieron)** OK, we should keep “own” in inverted commas. We should focus on three types of data that emerge from our online stuff: volunteered data (preferences, recommendations, friendships), observed or tracked data (downloads, browser history, location, health devices) and inferred data (credit scores, terrorist profiles, data mining). We have different intuitions, I think, about what our relationships should be to these types of data. In particular, the inferred data is (a) the result of some intellectual effort by someone other than ourselves, and (b) usually inferred from data about lots of people, not just me. So that is somewhat more remote from us, and is also created by someone at a cost to themselves. On the other hand, it may also have important effects upon us. So “ownership” is a difficult concept here (and in a literal sense we don’t own the data of which we are the subject, unless we create it ourselves using our own systems).
+
+Value is an important concept. What we can see PDSs as doing is rebalancing the value proposition here, so that at the moment, our data (data of which we are the subject) is of value to corporations or governments, who may, if they decide, create services defined by them which also provide a bit of value to us. PDSs give us the potential for more control of the value chain, whoever owns the data.
+
+Re ownership of data, we can go into that in as much detail as you think appropriate, but the Midata stuff is a good place to start as an example of the advantages and difficulties of returning “our” data to ourselves.
+	
+Privacy and autonomy: one strong claim about PDSs is that they allow informational self-determination. They make the trade-offs clearer, and give a stronger sense of whether, e.g., one wants to show one’s location in order to access a web service, or whether one wants to reveal one’s age (in a verifiable way) to get a drink.
+
+Nevertheless, the collection and curation of this data involves creating a resource of great value to many other people, not least governments. There will be attempts to get at this data, either by providing incentives (which might be financial, or may be in kind), or by force of law. So, for instance, your network of friends is a very good predictor of your credit risk - loan companies (in the news today, of course) will soon be offering cheaper loans to those who hand over access to their network.
+
+Furthermore, good curation of data can often stand in the way of privacy anyway - for instance, one way of preserving privacy involves perturbing data. But good practice in recording provenance makes that harder.
+
+So, PDSs might contribute to a small extent to one of the problems they are trying to solve. This might lead us to think about whether we might address this from the inside - are there privacy-by-design approaches that might help here?
+
+Reminder - PbD is often accompanied by hand-waving, but we can nail it down a little more firmly by focusing on 7 principles:
+1. Proactive and preventative, not reactive and remedial
+2. Privacy as default
+3. Privacy embedded in design, not a bolt-on after vulnerabilities spotted
+4. Privacy as positive sum opportunity, not a zero-sum compromise
+5. Full lifecycle security
+6. Transparency
+7. User-centric design
+
+Need for clear roles and rights for PDS users, and their business partners and trusted interactions. Clear set of obligations to anyone using the information. May revisit Novotny & Spiekermann’s 3 layer model for setting these out.
+
+Jones’s 6 Types of Personal Information [p, 34, Keeping Found Things Found]
+
+1. Owned/controlled by me		Email, files on our computers
+2.About me				Credit/medical history, web history
+3.Directed towards me		Phone calls, drop ins, adverts, popups
+4.Sent (provided) by me		Emails, tweets, published reports 
+5. Experienced by me		Pages, papers, articles I’ve read
+6. Relevant (useful) to me		Somewhere “out there” is the perfect vacation, house, job, lifelong mate
+
+Fundamental units of personal information
+Jones defines an information item to be a useful unit of discussing the individual elements that comprise our personal information.
+
+An information item is a packaging of information. Examples of information items include (1) paper documents, (2) electronic documents, digital photographs, digital music, digital film, and other files, (3) email messages, (4) web pages, and (5) references (e.g., shortcuts, aliases) to any of the above. Items encapsulate information in a persistent form that can be created, modified, stored, retrieved, given a name, tags, and other properties, moved, copied, distributed, deleted, and otherwise manipulated. An information item has an associated information form that is determined by the tools and applications that support these operations. Common forms of information include paper documents, e-documents and other files, email messages, and web bookmarks. (p 37, Jones, 2001)
+
+This definition fundamentally assumes that personal information environments can be considered comprised of discrete individual elements rather than a continuum.  Just as matter can be viewed as comprised of “continuous” macroscopic entities, but at the same time be comprised of discrete individual atoms, we think that being able to discuss personal information in terms of abstract collections of information at a macroscopic level is well complemented with a model consisting of the granular items that express the ways this information is recorded and stored.  (Indeed, the analogy is useful even continuing to the sub-atomic level, consisting of components of individual information items, as well shall discuss later)
+
+Characterising information items 
+Information items can come in many shapes, representations and forms, with some items being characteristically more similar in structure than others.  To reflect this, various researchers have derived various kinds of classifications of kinds of information items.  Jones uses what he calls information forms, which he defines in terms of both its internal structure and a common set of tools typically used to manipulate and create these information items.
+
+Actions on information items
+Keeping, Finding, Refinding, 
+		
+
+
+Social Me 
+
+
