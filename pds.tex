@@ -66,13 +66,19 @@ Jones takes an approach that distingushes among different kinds of information b
 
 \subsection{The Shape of Personal Data}
 
-At a lower level of detail, then, one might ask about the data model, its shape and, finally, its representation.  For this purpose, Jones introduces the notion of \emph{information forms} defined in terms of the tools used to manage them; e-mail is a single form because it is almost always accessed through an e-mail client, files though file management tools, blog entries using content management services (CMS) and so forth.  While this approach was well suited to the era of when apps defined singular data types, over time, as tools have become more sophisticated, they have become increasingly able to handle more diverse and complex kinds of information.  Perhaps more importantly, with the rise of Web-based tools, since all information is accessed through the singular tool of the web browser, with data often spanning multiple sites and pages, such distinctions are difficult to draw.
+At a lower level of detail, then, one might ask about the data model, its shape and, finally, its representation.  For this purpose, Jones introduces the notion of \emph{information forms} defined in terms of the tools used to manage them; e-mail is a single form because it is almost always accessed through an e-mail client, files though file management tools, blog entries using content management services (CMS) and so forth.  While this approach may have worked well in the era when apps defined singular data types, over time, as tools have become more sophisticated, they have individually become  able to handle more diverse and complex kinds of information.  Perhaps more importantly, with the rise of Web-based tools, since all information is accessed through the singular tool of a Web browser, with data often spanning multiple sites and pages, such distinctions are difficult to draw.
 
-At the lowest level, data is typically represent in terms any number of data formats, ranging from rows in database tables to various kinds of binary formats, to XML or JSON documents.  Various standards for how data are represented have essentially emerged as application writers devised formats to suit their apps in a relatively \emph{ad-hoc} manner.  The consequence of this is that the app itself is usually required for reading.
+A slightly different approach is to classify personal data by the data models and data schemas used.  Since personal data can be derived from practically any application, they may be derived from fundamentally heterogeneous data models (e.g., network, relational, object-oriented, document, etc). Similarly, the source(s) may take any potential source schema.  This means that PDSes must inherently address diversity at two levels, that of the fundamental data model, and that of the schema.
 
-Identifying the particular information forms to PDSes at any one moment involves enumerating all of the information forms commonly used, but also any that might be used in the future. 
+An additional requirement arises if PDSes are to present a unified, consolidated data model to the user out of multiple, heterogeneous data sources. Since inconsistencies arising from data model heterogeneity can easily confuse users people and greatly increase the complexity of system use, supporting data unification may be necessary. 
 
-This definition of information form relies 
+ a then the problem of data integration also fundamentally must be addressed; for multiple schemas to 
+
+% PDSes need to be able to are represented have essentially emerged as application writers devised formats to suit their apps in a relatively \emph{ad-hoc} manner.  The consequence of this is that the app itself is usually required for reading.
+
+% Identifying the particular information forms to PDSes at any one moment involves enumerating all of the information forms commonly used, but also any that might be used in the future. 
+
+% This definition of information form relies 
 
 \subsection{The Activities Around Personal Information}
 
