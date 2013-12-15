@@ -18,9 +18,9 @@
 
 A key characteristic common to the various kinds of ``social intelligence'' described in this volume is one of enhanced autonomy through technological support.  Such autonomy allows constituents of a society to dynamically form new connections with others as needed, promoting a more adaptive, flexible and robust social fabric than those of traditional structures, in which efficiency lead a majority to rely on a handful of central, fixed intermediaries.  
 
-While we see technology being applied in many ways to support the kind of autonomy thus described, personal information environments is one area where it has, thus far, been used to drive a reversal in such trends, towards more centralisation. Currently, a handful of dominant platform vendors and application service providers are grappling for control over individuals' personal information archives, trying to accumulate as many users as possible before the others. This trend as business model began with the rise of so-called ``Web 2.0'', the second phase of the Web which marked by the mass generation and sharing of user-generated content; content that started with a few social network profiles and blog posts, but gradually grew to encompass the entirety of personal data people keep, from files and documents to film and music archives. Thus began a migration of personal digital artefacts off the individually-administered personal computers into various information spaces of the web.  =
+While we see technology being applied in many ways to support the kind of autonomy thus described, personal information environments is one area where it has, thus far, been used to drive a reversal in such trends, towards more centralisation. Currently, a handful of dominant platform vendors and application service providers are grappling for control over individuals' personal information archives, trying to accumulate as many users as possible before the others. This trend as business model began with the rise of so-called ``Web 2.0'', the second phase of the Web which marked by the mass generation and sharing of user-generated content; content that started with a few social network profiles and blog posts, but gradually grew to encompass the entirety of personal data people keep, from files and documents to film and music archives. Thus began a migration of personal digital artefacts off the individually-administered personal computers into various information spaces of the web.
 
-This process has recently started to accelerate significantly, as platform vendors have begun to provide software that deeply integrates into the personal computing platforms and devices people use, from Facebook  integration on mobile phones to operating-system level integration of Windows Skydrive and Apple's iCloud.  Such services extend the reach of Web services into the intimate digital spaces of one's personal digital devices, so that these services might manage this data as well.
+This process has rapidly accelerated as Web application and service providers have started to integrate deeply with the personal computing platforms and devices people use, from ``deep'' Facebook integration on mobile phones to desktop operating-system level integration of Windows Skydrive and Apple's iCloud.  Such services extend the reach of Web services into the intimate digital spaces of one's personal digital devices, so that these services might manage this data as well.
 
 What are the implications of this centralisation?  Although the full consequences may not yet not be fully understood, a few are readily identifiable.  First, such delegation necessitates relinquishing some degree of control over various aspects of how this data is handled and controlled, ranging from how it is stored and represented, to how (and when) it can be accessed, as well as who has access to it.  Perhaps more significantly, it has profound implications on the future accessibility and preservation of this information, as many commodity service providers offer no longitudinal durability or accessibility guarantee for users' data- nor, in fact, any guarantees pertaining to its security.
 
@@ -42,7 +42,30 @@ In order for individuals to fundamentally maintain their information over the lo
 
 This description leaves undefined the kinds of activities that might constitute ``manage'', ``maintain'', ``control fully'' or ``use'' this information, nor even what kind(s) of information we are talking about.  In order to approach a requirements analysis, thus, we must further identify the kinds of information that such a store might handle, and the specific kinds of activities that constitute ``manage'' ``maintaining'' and ``using'' them. 
 
-Fortunately, extensive studies within the field of information science and human computer interaction (HCI), particularly the research field of Personal Information Management (PIM), that have documented the information keeping and usage practices, as well as the tools they currently use to help them keep track of all of it.  We thus borrow definitions from this field, first by defining the scope of per
+Fortunately, studies of information science and human computer interaction (HCI), particularly the research field of Personal Information Management (PIM), have worked to document the ways individuals work with, and manage the information in their lives, both in personal and work contexts.  We thus propose that work on PDSes should be informed thoroughly by this literature, specifically in scoping \emph{what} PDSes might do and further \emph{how} they best do it.
+
+To begin, we describe a few scenarios to illustrate the ways PDSes could impact the personal information management practices of individuals, towards greater autonomypotential for such capabilities towards supporting important information management  might solve significant data management problems by giving individuals control over the storage of their data.
+
+\section{Scenarios: Benefits of PDSes}
+
+\subsection{Consolidation rather than Fragmentation}
+
+\begin{quote}
+Anna has just two new year's resolutions this year: to start to save money towards her daughter's education, and to lose some weight as recommended by her physician.  To track her progress towards these goals, she uses many online tools; her credit and debit cards provide itemised descriptions of every purchase she makes, while her mobile phone tracks her movements, including any exercise she she performs, or whether she drives or takes public transport to work.
+
+\end{quote}
+
+\subsection{Preservation and Inter-generational Access}
+\subsection{Context-Aware Computing}
+
+access the family archive
+URL and a secret key
+seamless integration
+  diet
+  activities : exercise, sleep
+  self-diagnosis
+  energy saving
+societal interaction
 
 \section{Defining Personal Data}
 
@@ -66,17 +89,15 @@ Jones takes an approach that distingushes among different kinds of information b
 
 \subsection{The Shape of Personal Data}
 
-At a lower level of detail, then, one might ask about the data model, its shape and, finally, its representation.  For this purpose, Jones introduces the notion of \emph{information forms} defined in terms of the tools used to manage them; e-mail is a single form because it is almost always accessed through an e-mail client, files though file management tools, blog entries using content management services (CMS) and so forth.  While this approach was well suited to the era of when apps defined singular data types, over time, as tools have become more sophisticated, they have become increasingly able to handle more diverse and complex kinds of information.  Perhaps more importantly, with the rise of Web-based tools, since all information is accessed through the singular tool of the web browser, with data often spanning multiple sites and pages, such distinctions are difficult to draw.
+At a lower level of detail, then, one might ask about the data model, its shape and, finally, its representation.  For this purpose, Jones introduces the notion of \emph{information forms} defined in terms of the tools used to manage them; e-mail is a single form because it is almost always accessed through an e-mail client, files though file management tools, blog entries using content management services (CMS) and so forth.  While this approach was well suited to the era of when apps defined singular data types, over time, as tools have become more sophisticated, they have become increasingly able to handle more diverse and complex kinds of information.  Perhaps more importantly, since virtually all information accessed through the Web is through the singular tool of the web browser, making discinctions by which tool is used to access the data is no longer possible .
 
-At the lowest level, data is typically represent in terms any number of data formats, ranging from rows in database tables to various kinds of binary formats, to XML or JSON documents.  Various standards for how data are represented have essentially emerged as application writers devised formats to suit their apps in a relatively \emph{ad-hoc} manner.  The consequence of this is that the app itself is usually required for reading.
+At the lowest level, data is typically represented in terms any number of data formats, ranging from rows in database tables to various kinds of binary formats, to XML or JSON documents.  Various standards for how data are represented have essentially emerged as application writers devised formats to suit their apps in a relatively \emph{ad-hoc} manner.  The consequence of this is that the app itself is usually required for reading.
 
 Identifying the particular information forms to PDSes at any one moment involves enumerating all of the information forms commonly used, but also any that might be used in the future. 
 
 This definition of information form relies 
 
 \subsection{The Activities Around Personal Information}
-
-Once again, PIM research 
 
 \begin{table}
 \begin{tabular}{p{5cm} p{7cm}} 
@@ -91,7 +112,9 @@ Meta-level activities (managing, maintaining ..) & Management \\
 \label{fig:pimactivities}
 \end{table}
 
-\subsection{Data Ownership}
+\subsection{Scenario}
+
+\subsetion
 
 \bibliographystyle{abbrv}
 \bibliography{webbox2012-app}
