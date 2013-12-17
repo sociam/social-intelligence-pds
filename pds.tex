@@ -26,11 +26,25 @@ While this mechanism has thus far been hugely successful at creating extremely p
 
 This misalignment of incentives between \emph{what users want to do with their data} and \emph{what platform providers want to do with their data} has the potential to destructively interfere with development of context-sensitive applications that promise more effective, personalised, behavioural-adaptive applications that rely on richer and more sensitive data models, due to either actual or perceived privacy risks entailed.  Moreover, the dependency relationships that result from this process places unprecedented power in the hands of these companies, leaving individuals fundamentally powerless towards effectively switching to alternative providers in the long term; the result of this is an overall reduction of autonomy and mobility, potentially ultimately leading to increased fragility, fragmented data spaces and lost or forgotten data\cite{lostlegacy}.
 
-However, a basic assumption that powers this dependence is the disparity between the data management capabilities held by the end-users of the Web from those that provide the hosting and storage. In this chapter, we question this ``thin client'' model of Web computing by proposing a way that better data management capabilities might be re-introduced directly within the devices they own and control, to allow users to retain control over their data while supporting the same social, dynamic interaction flows they have come to experience on the Web. This set of capabilities we refer to as \emph{personal data stores},  capabilities to put fundamental data storage, hosting, and sharing capabilities at the end user individual, so that these vital facilities can follow users as they interact with one another and third party individuals.  We first examine the needs for what such a platform through insights from the field of Personal Information Management (PIM).  Second, we conduct an analysis of existing technical platforms  that have been introduced towards meeting these needs.  Finally, the chapter concludes with a discussion of how these platforms may change the socio-economic landscape of the Web, and the ways personal data is shared, collected and handled.
+However, a basic assumption that powers this dependence is the disparity between the data management capabilities held by the end-users of the Web from those that provide the hosting and storage. In this chapter, we question this ``thin client'' model of Web computing by examining an alternative approach that places the responsibility of data management back with the users who own it, but in a way that is natural and manageable, while supporting the same social, dynamic interaction flows they are used to on the Web.  This set of capabilities we refer to as \emph{personal data stores} (PDSes), the technical goal of which is to augment user computing devices with secure data storage, hosting, and sharing capabilities which can be used to longitudinally archive and manage valuable information, as they interact with one another and third parties respectively.  
 
-\section{What is a Personal Data Store?}
+To derive the requirements for personal needs for what such a platform through insights from the field of Personal Information Management (PIM).  Second, we present a brief summary of existing platforms being used to manage personal information and their characteristics.  The chapter concludes with a discussion of how these platforms may change the socio-economic landscape of the Web, and the ways personal data is shared, collected and handled.
 
-We begin with an abstract characterisation of what a technical capability for achieving the aforementioned goal, adopting the term  \emph{personal data store} (PDS) from the Vendor Relationship Management community \cite{vrm} to refer to this collective capability. (The use of PDS in the singular is not intended to imply such a system would have to be a monolithic system, but might be realised through several or many disparate systems providing support).
+\section{Background and Brief History}
+
+The genesis of digital personal data archives actually pre-date the digital computer entirely, to Vannevar Bush's Memex vision of 1945\cite{memex}, which proposed a mechanical framework for supporting the collection, archiving, and organisation of information to facilitate later cross-reference and retrieval.  Douglas Engelbart's realisation of NLS\cite{engelartnls} in 1969 demonstrated many ideas that would not be realised in any commercially available products for the next decade, including one of the earliest graphical user interfaces, the computer mouse, drag and drop manipulation, dynamic hierarchies, hyperlinks, hotkeys multi-view representations, and real-time remote collaboration.  Finally, the introduction of the personal computer in 1984 was shortly followed by a many first generation personal information management tools for them, ranging from personal database systems like Filemaker \cite{filemaker}, to digital calendaring and contact management tools, to file managers, spreadsheets and word processors.
+
+Computer science research in the 1990s investigated approaches of automatic sensing and capturing aspects of everyday life activities into personal \cite{lifelogs}, starting, perhaps with the Pepys Memory Prosthesis \cite{pepys}.  Wearable and ubiquitous computing research continued this line of investigation, introducing approaches at building higher-resolution and more complete logs of people's activities, systems to capture and document an individual's entire information diet (e.g,. MyLifeBits \cite{mylifebits}), and applications for data-mining lifelogs for various important life patterns (e.g. Life Patterns \cite{clarksonphd}).  The next decade saw specific evaluations of lifelogging in various specialised contexts, including healthcare for chronic disease maintenance, including memory prosthesis applications for alzheimer's patients \cite{}, and cognitive behavioural therapy.
+
+Simultaneously, the rapid rise of the Web brought a massive array of apps and services for managing many kinds of information, ranging from the personal and sensitive to social to public.  With increasing quantities of the population ``going online'' emerged a market for the personal information people were putting online, along with concerns over privacy, security over one's personal data, and rights to access. Government initatives to give consumers more protection over various aspects of both how data about them could be collected and handled were proposed and trialed with modest success in the United States and and more success in Europe.  Simultaneously, independent research efforts in trying to give end users as consumers more control over their online privacy began to emerge such as the \emph{Vendor Relationship Management (VRM) Program}, which sought to not only investigate technical solutions but legal and economic frameworks that would lead to more beneficial outcomes for both consumers and businesses through consumer-empowerment.  Out of this work emerged the earliest mentions of Personal Data Stores, in the context of online e-commerce, which sparked from around 2011 more than a dozen different Personal Data Store offerings, platforms  and services backed by commercial start-ups.  
+
+The World Economic Forum commissioned a report on the personal data economy and ways to ``unlock its value'', outlining a programme that projected that Personal Data Store technology would be a core enabling mechanism through which emerging personal-data rich applications could thrive while simultaneously respecting the privacy requirements of individuals online\cite{WEF-report}.  Nearly simulatneously, independent research think-tank Ctrl-Shift produced a comprehensive report on Personal Data Store efforts and their roles in emerging information markets from a socioeocnomic perspective \cite{ctrlshift}.  In 2011, the UK government commissioned the \emph{midata} programme to incentivise corporations to give their customers direct and unfettered access to data kept about them on their behalf.  The success of \emph{midata} has been described to be contingent on several important steps, including realising effective tools such as personal data stores for letting indivdiual users easily consume, consolidate and make use of this data once it is made available.
+  
+Yet despite the considerable attention received about Personal Data Stores, the various platforms have struggled to gather significant support or attention from the public.
+
+  Yet despite
+
+We begin with an abstract characterisation of what a technical capability for achieving the aforementioned goal, adopting the term  \emph{personal data store} (PDS) from the Vendor Relationship Management (VRM) research community \cite{vrm}.  % (The use of PDS in the singular is not intended to imply such a system would have to be a monolithic system, but might be realised through several or many disparate systems providing support).
 
 In order for individuals to fundamentally maintain their information over the long term, a PDS must facilitate the maintance and keeping of such data. Thus, we arrive at the following first definition of a PDS.
 
@@ -40,10 +54,7 @@ In order for individuals to fundamentally maintain their information over the lo
 
 \end{quote}
 
-This description leaves undefined the kinds of activities that might constitute ``manage'', ``maintain'', ``control fully'' or ``use'' this information, nor even what kind(s) of information we are talking about.  In order to approach a requirements analysis, thus, we must further identify the kinds of information that such a store might handle, and the specific kinds of activities that constitute ``manage'' ``maintaining'' and ``using'' them. 
-
-Fortunately, studies of information science and human computer interaction (HCI), particularly the research field of Personal Information Management (PIM), have worked to document the ways individuals work with, and manage the information in their lives, both in personal and work contexts.  We thus propose that work on PDSes should be informed thoroughly by this literature, specifically in scoping \emph{what} PDSes might do and further \emph{how} they best do it.
-
+This description leaves undefined the kinds of activities that might constitute ``manage'', ``maintain'', ``control fully'' or ``use'' this information, nor even what kind(s) of information we are talking about.  In order to approach a requirements analysis, one must consider both questions \emph{what} and \emph{how}; the kind(s), representation(s) of information to be stored and managed, and how the system is to support the user towards doing supporting use of and management of the data.  Toward this end, the fields of information science and human computer interaction (HCI), particularly the research field of Personal Information Management (PIM), have worked to document the ways individuals work with, and manage the information in their lives, both in personal and work contexts.  We thus propose that work on PDSes should be informed thoroughly by this literature, specifically in scoping \emph{what} PDSes might do and further \emph{how} they best do it.
 
 \section{Defining Personal Data}
 
@@ -71,7 +82,7 @@ Jones takes an approach that distingushes among different kinds of information b
 
 At a lower level of detail, then, one might ask about the data model, its shape and, finally, its representation.  For this purpose, Jones introduces the notion of \emph{information forms} defined in terms of the tools used to manage them; e-mail is a single form because it is almost always accessed through an e-mail client, files though file management tools, blog entries using content management services (CMS) and so forth.  While this approach may have worked well in the era when apps defined singular data types, over time, as tools have become more sophisticated, they have individually become  able to handle more diverse and complex kinds of information.  Perhaps more importantly, with the rise of Web-based tools, since all information is accessed through the singular tool of a Web browser, with data often spanning multiple sites and pages, such distinctions are difficult to draw.
 
-A slightly different approach is to classify personal data by the data models and data schemas used.  Since personal data can be derived from practically any application, they may be derived from fundamentally heterogeneous data models (e.g., network, relational, object-oriented, document, etc). Similarly, the source(s) may take any potential source schema.  This means that PDSes must inherently address diversity at two levels, that of the fundamental data model, and that of the schema.
+A slightly different approach is to classify data by the data models and data schemas used.  Since personal data can be derived from practically any application, they may be derived from fundamentally heterogeneous data models (e.g., network, relational, object-oriented, document, etc). Similarly, the source(s) may take any potential source schema.  This means that PDSes must inherently address diversity at two levels, that of the fundamental data model, and that of the schema.
 
 \subsection{The Activities Around Personal Information}
 
@@ -88,26 +99,24 @@ Meta-level activities (managing, maintaining ..) & Management \\
 \label{fig:pimactivities}
 \end{table}
 
-To begin, we describe a few scenarios to illustrate the ways PDSes could impact the personal information management practices of individuals, towards greater autonomypotential for such capabilities towards supporting important information management  might solve significant data management problems by giving individuals control over the storage of their data.
-
 An additional requirement arises if PDSes are to present a unified, consolidated view of the user's data derived from multiple, heterogeneous data sources. Doing so requires addressing the challenge of reconciling heterogeneity.  This is particularly critical as inconsistencies arising from data model heterogeneity can easily confuse users people and greatly increase the complexity of system use (e.g. \cite{})
 
 Finally, most data formats are not ``future-proof'' in the sense that they are not an open format that 
 
 \section{Managing Personal Data Today: Services and Platforms}
 
-
+Today's data platforms are focused primarily around \emph{backup} and \emph{remote access}.  The majority of cloud-based platforms offer both
 
 \begin{table}
 \begin{tabular}{l p{5cm} p{7cm} p{4cm} } 
-personal.com & Cloud svc for keeping important structured data of specific schema types (passwords, contact details) & User keeps key, provider has no access to data \\
-mydex & Cloud svc centered around specific structured data and identity verification & Emphasis on identity assurance and certification \\
-Skydrive & Microsoft's cloud storage for personal \\
-Dropbox & \\
-Google Drive \\
-Apple iCloud \\
+personal.com & Cloud svc for keeping important structured data of specific schema types (passwords, contact details) & User keeps key, provider has no access to data & Subscription-based \\
+mydex & Cloud svc centered around specific structured data and identity verification & Emphasis on identity assurance and certification & Subscription-only \\
+Skydrive & Microsoft's cloud storage for personal & Freemium (5GB) \\
+Dropbox & Freemium (5GB) \\
+Google Drive & Freemium (7GB) \\
+Apple iCloud & Freemium (5GB) \\
 \end{tabular}
-\caption{Third-party cloud data storage offerings}
+\caption{Commercial third-party cloud storage offerings}
 \label{fig:cloudstorage}
 \end{table}
 
