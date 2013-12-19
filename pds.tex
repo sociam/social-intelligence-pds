@@ -112,48 +112,80 @@ Meta-level activities (managing, maintaining) & Management \\
 \end{table}
 
 
-\subsection{Towards a Requirements Analysis}
+\section{Survey of Online Data Platforms and Services}
 
-The next challenge, thus, is to identify how the design of future PDSes might be informed by such studies and abstract characterisations of the kinds of information people manage and the ways they go about doing so.  
+Given this characterisation of the various kinds of \emph{personal data} and activities around it, we can identify the ways that current online services fulfill the needs towards people's information types and activities.
 
-This is challenging for a number of reasons; first, the above characterisations are considerably high-level.  Although examples can be generally identified for each, it may be difficult to extrapolate from specific examples a set of scoped design recommendations.
+Figure \ref{fig:cloudstorage} characterises the top five personal data cloud platorms by number of users. While Facebook may not be considered and end-user personal data storage provider of the likes of Dropbox, it remains one of the world's largest brokers of personal information.  Of particular interest is its introduction of Timeline in December 2011, when it started encouraging users to document the entire chronnology of their lives on the service, prompting users to backfill information about their lives from before they joined the platform through specific questions and prompts.  As a result, Facebook has quickly amassed one of the world's largest single collections of lifetime biographical information directly elicited from individuals.
 
-A second problem arises from the goal of long-term data management; since information can remain valuable for years or even generations, a central purpose of PDSes is to support the keeping and use of data over such durations.  While merely storing data for such timespans is challenging given the rapid pace of digital infrastructures, data formats and computing platforms, supporting its effective use over such a duration may be considerably more difficult, requiring consideration of how not only the information might change but its use as well.
+Facebook only the supports the storage of very specific information forms, spanning status updates, likes, photos, messages to individuals and so forth.  While Google Apps and iCloud support similar structured data entries such as calendar entries, all but iCloud support general file storage.  A survey of why people used these storage services revealed that while backup had previously been the main reason for using online cloud services, multi-device access and sharing/collaboration have quickly eclipsed backup for reasons people use such services online \cite{listitstudy}. The primary use of Facebook, meanwhile is to stay connected with others, as well as several emotional reasons, spanning reasons of self-actualisation and to fulfill the need to belong \cite{why-do-people-facebook}.
 
-\section{INDX: A Prototype Personal Data Store}
+\begin{table}
+\begin{tabular}{p{2.2cm} p{8cm} l}
 
-\subsection{Architecture}
+\emph{Facebook} & Profile incl. Timeline; Friends; Events; Group memberships; Biographical history; States favourites; Preferences; Message archives; Liked pages, images, products; Places visited. & Free \\
 
-\subsection{Implementation}
+\emph{Google Apps and GDrive} & Any files; Google Docs; calendar; G+ profile; identify and profiles of friends; search history; page access history; bookmarks; locations visited & Freemium\\
 
-\section{Discussion}
+\emph{Apple iCloud} & iWork Documents, Photos, Calendars, Passwords (Keychain) & Freemium \\
+Dropbox & Any files & Freemium \\
 
-\subsection{Ownership and Value}
+\emph{Skydrive} & Office Documents; Any files. & Freemium \\
 
-\subsection{Data Licensing and Rights Management}
+\end{tabular}
+\caption{Commercial third-party cloud storage offerings}
+\label{fig:cloudstorage}
+\end{table}
 
-\subsection{Time-resilient Data Formats}
+However, these services primarily pertain to the management of a fraction of the personal data encompassed by Jones's definition above, specifically ``data owned/controlled by me''.  If we also extend consideration to online services that host and collect ``data about me'' as well, there are now an increasing number of sensor-driven apps and services that facilitate the tracking of various, routine aspects of everyday life activities, spanning purchases, movements, wellbeing vital statistics; we list such life tracking sites in Figure \ref{aboutme}.
 
-\subsection{Data Literacy}
+\begin{table}
+\begin{tabular}{p{2cm} p{6.1cm} p{2.54cm}}
+Service & Description & Logging Method \\
+\hline
+Foursquare & Visits made to points of interest & Manual check-ins \\
+\hline
+Moves & Complete history of a person's movements throughout the day as recorded from smartphone app  & Sensed via smartphone app \\ 
+\hline
+Mint & Access to personal banking records (tracking spending) & Automatic \\
+\hline
+Withings; Runkeeper & Access to weight, blood pressure, heart rate & Semi-automatic\\
+\hline
+Fitbit; Fuelband; Jawbone & Daily activity levels & Sensed via worn sensor \\ 
+\hline
+Wattvision; Stepgreen & Energy consumption & Automatic (service provider) \\
+\hline
+Moodpanda; Mappiness; Gotafeeling & Mood & Experience Sampled \\
+\hline
+CalorieCounter; Fooducate & Daily calorie consumption & Manual \\
+\end{tabular}
+\caption{Web lifelogging services that facilitate the capture and logging of everyday life experiences. }
+\label{fig:aboutme}
+\end{table}
 
-\section{Conclusion}
+While both categories of services broker significant amounts of data, these do not generally meet the requirements for personal data stores, as service providers ultimately control how this data is stored, secured, and have full access to its contents.  Other services, meanwhile have been launched ofcused on security of user data; a list of such services are listed in \ref{fig:pdsofferings} and are sometimes referred to as the first generation of ``personal data store'' offerings.
 
-% \section{Managing Personal Data Today: Services and Platforms}
+\begin{table}
+\begin{tabular}{l p{8.5cm}}
+Personal.com & Cloud svc for keeping important structured data of specific schema types (passwords, contact details)  \\
+Mydex & Cloud svc centered around specific structured data and identity verification  \\
+\end{tabular}
+\caption{Personal Data Store offerings which encrypt data to provide a high degree of user data security, e.g., only the user has access.}
+\label{fig:pdsofferingsp}
+\end{table}
 
-% Today's data platforms are focused primarily around \emph{backup} and \emph{remote access}.  The majority of cloud-based platforms offer both
+\begin{table}
+\begin{tabular}{l p{9cm} }
+aerofs & Commercial solution for self-hosting a centralised dropbox-like service \\
+bittorrent sync & Commercial peer to peer file synchronisation software for personal computers \\
+gitannex &  FOSS Distributed file metadata maintenance system for advanced users \\ 
+cosicloud & FOSS self-hosted cloud platform for plug computers offering mail, photo, contact and metadata hosting and storage \\
+data.fm & FOSS RDF-based Web data store with linked data support
+\end{tabular}
+\caption{Self hosted personal data platforms}
+\label{fig:selfhosted}
+\end{table}
 
-% \begin{table}
-% \begin{tabular}{l p{5cm} p{7cm} p{4cm} } 
-% personal.com & Cloud svc for keeping important structured data of specific schema types (passwords, contact details) & User keeps key, provider has no access to data & Subscription-based \\
-% mydex & Cloud svc centered around specific structured data and identity verification & Emphasis on identity assurance and certification & Subscription-only \\
-% Skydrive & Microsoft's cloud storage for personal & Freemium (5GB) \\
-% Dropbox & Freemium (5GB) \\
-% Google Drive & Freemium (7GB) \\
-% Apple iCloud & Freemium (5GB) \\
-% \end{tabular}
-% \caption{Commercial third-party cloud storage offerings}
-% \label{fig:cloudstorage}
-% \end{table}
 
 % \begin{table}
 % \begin{tabular}{l p{5cm} p{7cm} l l l } 
@@ -180,6 +212,34 @@ A second problem arises from the goal of long-term data management; since inform
 % \caption{Personal backup devices}
 % \label{fig:se}
 % \end{table}
+
+
+
+\subsection{Towards a Requirements Analysis}
+
+The next challenge, thus, is to identify how the design of future PDSes might be informed by such studies and abstract characterisations of the kinds of information people manage and the ways they go about doing so.  
+
+This is challenging for a number of reasons; first, the above characterisations are considerably high-level.  Although examples can be generally identified for each, it may be difficult to extrapolate from specific examples a set of scoped design recommendations.
+
+A second problem arises from the goal of long-term data management; since information can remain valuable for years or even generations, a central purpose of PDSes is to support the keeping and use of data over such durations.  While merely storing data for such timespans is challenging given the rapid pace of digital infrastructures, data formats and computing platforms, supporting its effective use over such a duration may be considerably more difficult, requiring consideration of how not only the information might change but its use as well.
+
+\section{INDX: A Prototype Personal Data Store}
+
+\subsection{Architecture}
+
+\subsection{Implementation}
+
+\section{Discussion}
+
+\subsection{Ownership and Value}
+
+\subsection{Data Licensing and Rights Management}
+
+\subsection{Time-resilient Data Formats}
+
+\subsection{Data Literacy}
+
+\section{Conclusion}
 
 
 % Identifying the particular information forms to PDSes at any one moment involves enumerating all of the information forms commonly used, but also any that might be used in the future. 
