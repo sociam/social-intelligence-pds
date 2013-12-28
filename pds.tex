@@ -109,32 +109,20 @@ Technological support for each of these information activities has demonstrated 
 
 Yet such technological support has remained rudimentary towards most of the other aforementioned personal information activities, including reminding, sensemaking, discovery and orienteering.  Reminding in PIM tools, for example, has until only recently been limited to clock/calendar-based alarms that need to be explicitly set for a specific date and time, despite the rich variety of ``off-line'' strategies people have naturally adopted for their own uses\cite{belottitodo}.  While the basic calendar alarm remains heavily used, its precision, brittleness and intrusiveness have been documented to result in their loss of effectiveness, sometimes through extended  ``snooze wars'', in which users repeatedly dismiss alarms, resulting in their piling up over time.  Such alarms in such cases end up a burdensome annoyance, instead of the assistance they were intended to provide.  
 
-\section{Challenges Supporting Information Activities in PDSes}
+\section{Challenges Distinct to PDSes}
 
-The goal of providing individuals with the capacity to longitudinally maintain their own personal information  imposes a number of unique challenges towards supporting the kinds of information activities just described.  In particular, are four uniqu sets of challenges that must be met; the first, most fundamental of which pertains to effective \emph{longitudinal keeping}.  Enabling individuals to store safely keep their data for a long time, while ensuring its continued accessibility and usefuleness impacts both the data formats and methods used to store them.  For example, since a person's physical computational hardware is likely to fail with age, methods need to be in place for ensuring robustness to such failures, such as multi-device replication and the ability for data to be easily migrated from older to new devices over time.   Moreover, as evidenced by Moore's law \cite{gray2000rules}, since the technical capabilities and properties of such data storage devices and platforms are likely to fundamentally change over time, PDSes must be designed to be able to accomodate (and take advantage of) such changes as they arise.
+The goal of providing individuals with the capacity to longitudinally maintain their own personal information imposes a number of unique challenges towards supporting the kinds of information activities just described.  In particular, are four uniqu sets of challenges that must be met; the first, most fundamental of which pertains to effective \emph{longitudinal keeping}.  Enabling individuals to store safely keep their data for a long time, while ensuring its continued accessibility and usefuleness impacts both the data formats and methods used to store them.  For example, since a person's physical computational hardware is likely to fail with age, methods need to be in place for ensuring robustness to such failures, such as multi-device replication and the ability for data to be easily migrated from older to new devices over time.   Moreover, as evidenced by Moore's law \cite{gray2000rules}, since the technical capabilities and properties of such data storage devices and platforms are likely to fundamentally change over time, PDSes must be designed to be able to accomodate (and take advantage of) such changes as they arise.
 
-The second challenge pertains to tackling the complexities of data security and maintenance for individuals who might have little or no experience in the intricacies of data magagement.  The current state of data management means that often merely ensuring that one's personal data is not lost to hardware and software failure, malicious attacks, or safely migrated to new platforms and devices requires considerable time and expertise.  This motivates people to essentially outsource maintenance of data to third parties, such as cloud data providers we describe later.  In order to achieve the goals of PDSes, thus, which is increased self-autonomy, the platform itself must directly support and automate common maintenance activities.
+A second challenge concerns allowing individuals who might have little or no experience in the intricacies of data management to cope with the burden of data security and longitudinal maintenance.  Using current tools and services, for example, managing your data yourself still means taking pains to ensure that one's personal data is not lost to hardware and software failure, malicious attacks, or safely migrated to new platforms and devices; such efforts require vast investments of time, effort and expertise.  A general lack of expertise or willingness to do this  means that people currently rarely know how or bother with backing up or consolidating their data. Thus it is no surprise that individuals have been motivated to outsource maintenance of their data to third parties, such as cloud data providers we describe later.  In order to facilitate autonomy from such services, thus, PDSes must seek to directly support, and automate where possible, tedious data maintenance tasks that have plagued PC users for decades.  Such automation could both ensure compliance for promoting data security and integrity, such as continuous backup regimes, thereby countering recent studies of the extremely low compliance 
 
-The third arises from the proposal for PDSes to be \emph{user-centric}, which proposes that a person's data be kept in a consolidated under the user's control instead of necessarily placed entirely  among a potentially large number of third party service-providers and apps.  Note that 
+A separate set of challenges arise from the shift back from service-provider controlled data storage to a user-centered model of data management. As mentioned earlier, this transition will re-empower users to control the organisation of their data spaces, rather than having it dictated by third parties.  A second advantage to this approach is that it may eliminate the pervasive problem of data fragmentation \cite{jones}, by allowing individuals to keep consolidated, definitive copies of their information, instead of being required to distributing information among separate services by their types \cite{web-fragmentation}.  However, the challenge with the increased flexibility that this approach affords is that it requires re-consideration of how third-party applications and services can interact with such data, which have traditionally been pre-defined to operate on a fixed, typically application-provider established, set of data representation(s) and manipulations.  In a consolidated, user-centric data model, on the other hand, such representations may be be specified or modified by the individual, or by some other third-party application(s) on behalf of them, and thus applications themselves must be designed to accommodate such variability among representations.  We discuss how semantic data representations have been used to address such challenges later in approaches.
 
- from a shift from service-provider-centric challenge is to provide enough flexibility to accommodate future applications
+Perhaps the ultimate set of challenges, however, pertain to accommodating change as it affects both the information itself and the practices and activities surrounding it, over the years that a PDSes is intended to operate.  Technologies that bring in new ways that data is used and generated seem to be introduced every quarter, placing new demands how this information needs to be accessed, created and used.  The most recent examples include wearable computing and ``always on'' wearable sensor technology, from simple devices such as Fitbit and Fuelbands that unobtrusively but nearly constantly measure simple aspects of an individual's activity, to complex computational devices that can both deliver and capture information in high fidelity and quantity anywhere, such as Google Glass.  Since the introduction of such devices and software in some cases bring about considerable changes in people's activities, 
 
-for data robustness against physical device failure or loss, this requires PDSes to fundamentally allow people to freely replicate their 
+% information is created and shared, and new ways that society responds to and uses information for data robustness against physical device failure or loss, this requires PDSes to fundamentally allow people to freely replicate their or ensuring continued readability and usabililty as the hardware and software platforms that might be used with it changes.  The second is essentially to provide flexibility to adapt to future needs nd applications as they arise, so that PDSes continue to be useful as time passes.  A effort at doing The second is in self-maintenance; is the consideration of factors involved in the long-term maintenance and evolution of personal data collections.
 
-or ensuring continued readability and usabililty as the hardware and software platforms that might be used with it changes.  The second is essentially to provide flexibility to adapt to future needs nd applications as they arise, so that PDSes continue to be useful as time passes.  A effort at doing
-
-The second is in self-maintenance; 
-
-is the consideration of factors involved in the long-term maintenance and evolution of personal data collections.
-
-\subsubsection{Proactive support: Context-sensitivity and automation }
-Location based reminding apps, such as Checkmark \footnote{Checkmark - \url{itunes.apple.com/us/app/id524873453?mt=8}} have started to break out of aforementioned calendar-alarm to more adaptive reminding, by allowing alarms to be set sensitive to the user's automatically-sensed physical location.  While still very simple and potentially fallible, this approach highlights the potential for greater context-sensitive support for all of the various personal information activities.  
-
-Context-sensitive support is particularly attractive towards future PDS work as it seeks to apply automation to provide
-
- suggests  towards more adaptive reminding strategies (e.g., with task based-reminding \cite{task-based-reminding}) have been demonstrated in a research setting, they have yet to be realised in a sufficiently robust context for widespread use.
-
-In discussing the support for PIM activities in the longitudinal context of PDSes, 
+ % suggests  towards more adaptive reminding strategies (e.g., with task based-reminding \cite{task-based-reminding}) have been demonstrated in a research setting, they have yet to be realised in a sufficiently robust context for widespread use.
+% In discussing the support for PIM activities in the longitudinal context of PDSes, 
 
 \section{Survey of Online Data Platforms and Services}
 
@@ -210,7 +198,6 @@ data.fm & FOSS RDF-based Web data store with linked data support
 \label{fig:selfhosted}
 \end{table}
 
-
 % \begin{table}
 % \begin{tabular}{l p{5cm} p{7cm} l l l } 
 % Service & self-hosted & open-source & data types & security & longevity \\
@@ -237,15 +224,22 @@ data.fm & FOSS RDF-based Web data store with linked data support
 % \label{fig:se}
 % \end{table}
 
+\section{Technical Approaches}
 
+\subsection{Proactive support: Context-sensitivity and automation}
+Location based reminding apps, such as Checkmark \footnote{Checkmark - \url{itunes.apple.com/us/app/id524873453?mt=8}} have started to break out of aforementioned calendar-alarm to more adaptive reminding, by allowing alarms to be set sensitive to the user's automatically-sensed physical location.  While still very simple and potentially fallible, this approach highlights the potential for greater context-sensitive support for all of the various personal information activities.  
 
-\subsection{Towards a Requirements Analysis}
+Context-sensitive support is particularly attractive towards future PDS work as it seeks to apply automation to provide
 
-The next challenge, thus, is to identify how the design of future PDSes might be informed by such studies and abstract characterisations of the kinds of information people manage and the ways they go about doing so.  
+\subsection{Semantic Technology}
 
-This is challenging for a number of reasons; first, the above characterisations are considerably high-level.  Although examples can be generally identified for each, it may be difficult to extrapolate from specific examples a set of scoped design recommendations.
+% \subsection{Towards a Requirements Analysis}
 
-A second problem arises from the goal of long-term data management; since information can remain valuable for years or even generations, a central purpose of PDSes is to support the keeping and use of data over such durations.  While merely storing data for such timespans is challenging given the rapid pace of digital infrastructures, data formats and computing platforms, supporting its effective use over such a duration may be considerably more difficult, requiring consideration of how not only the information might change but its use as well.
+% The next challenge, thus, is to identify how the design of future PDSes might be informed by such studies and abstract characterisations of the kinds of information people manage and the ways they go about doing so.  
+
+% This is challenging for a number of reasons; first, the above characterisations are considerably high-level.  Although examples can be generally identified for each, it may be difficult to extrapolate from specific examples a set of scoped design recommendations.
+
+% A second problem arises from the goal of long-term data management; since information can remain valuable for years or even generations, a central purpose of PDSes is to support the keeping and use of data over such durations.  While merely storing data for such timespans is challenging given the rapid pace of digital infrastructures, data formats and computing platforms, supporting its effective use over such a duration may be considerably more difficult, requiring consideration of how not only the information might change but its use as well.
 
 \section{INDX: A Prototype Personal Data Store}
 
