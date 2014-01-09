@@ -1,15 +1,55 @@
-\documentclass[runningheads,a4paper]{llncs}
+\documentclass[graybox]{svmult}
 
-% \usepackage{amssymb}
-\setcounter{tocdepth}{3}
-\usepackage{graphicx}
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}       % selects Times Roman as basic font
+\usepackage{helvet}         % selects Helvetica as sans-serif font
+\usepackage{courier}        % selects Courier as typewriter font
+\usepackage{type1cm}        % activate if the above 3 fonts are
+                            % not available on your system
+%
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{xspace}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=red]{hyperref}
+
+\usepackage{color} 
+\newcommand{\todo}[1]{\fcolorbox{green}{green}{#1}}
+\newcommand{\hmm}{\fcolorbox{yellow}{yellow}{!?}}
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex            
+ % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-\title{The Future of Social is Personal: The Role of Personal Data Stores in Social Interfaces}
+\title*{The Future of Social is Personal: The Role of Personal Data Stores in Social Interfaces}
 
-% by Max Van Kleek, Kieron O’Hara
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\author{Max Van Kleek and Kieron O’Hara}
+% Use \authorrunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\institute{Max Van Kleek\at University of Southampton, University Road,
+Southampton, SO17 1BJ, \email{emax@ecs.soton.ac.uk}
+\and Kieron O’Hara\at University of Southampton, University Road,
+Southampton, SO17 1BJ, \email{kmo@ecs.soton.ac.uk}}
 
+%
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
 \maketitle
 
 \section{Introduction}
@@ -69,7 +109,7 @@ The uses to which such data may be put might be social or entertainment, or coul
 The task of identifying all of the kinds of data a person might need to keep, manage and use is a complex and not easily scoped task.  Researchers in PIM have derived various working definitions of \emph{personal information} in order to effectively scope their field of study, and and have made progress towards potential functional classifications for kinds of personal information. One such classification by Jones et al. from \cite{kftf} is visible in Figure\ref{fig:jonestype}.
 
 \begin{table}
-\begin{tabular}{p{4cm} p{8cm}} 
+\begin{tabular}{p{4cm} p{8cm}}
 Category & Examples \\
 1. Owned/controlled by me & e.g., Email, files on our computers  \\
 2. About me	& e.g., my credit/medical history, web history \\
@@ -194,11 +234,11 @@ A separate set of challenges arises from the shift back from service-provider co
 The need to comply with local, national and international data handling requirements pose unique challenges for individually-managed general purpose data stores. In particular, if  PDSes are to be designed to support the storage of identifiable information, or more critically, regulated sensitive information such as individuals’ medical records, then PDSes must implement a variety of security standards (e.g. \cite{}) to ensure its secured storage.  Perhaps more difficult might be achieving compliance with the additional data handling requirements imposed by these regulations beyond how it is stored and encrypted; in particular, key handling requirements and guaranteeing aspects of physical access to the machine(s). The integrity of data must also be secured --- for instance, although a patient should have the right to challenge and correct inaccurate medical data, if the PDS is to store a version of medical data that is likely to be used (for example, in support of medical treatment in a foreign country), the data would need not only to be accurate, but also of appropriate provenance in order to be properly adapted to the standard workflows of medical treatment.
 
 % Protecting Privacy
-Even if PDSes were to achieve all of the aforementioned goals, individuals would still face the fact that service providers would inevitably continue to profile and amass information about them, as long as it aligned with their incentives to do so (and it is hard to imagine that it will not --- for instance, a service provider may need to gather a large amount of personal data in order to ensure correct and appropriate billing for its services).  Thus, in order for PDSes to give users the degree of autonomy and independence from profiling, they would need to include privacy-enhancing technologies, such as IP anonymisers, user-agent randomisation and cookie blocking. This may be difficult or impossible to do on “closed” platforms such as iOS that prevent these techniques because they are perceived as ``hacking’’.
+Even if PDSes were to achieve all of the aforementioned goals, individuals would still face the fact that service providers would inevitably continue to profile and amass information about them, as long as it aligned with their incentives to do so (and it is hard to imagine that it will not --- for instance, a service provider may need to gather a large amount of personal data in order to ensure correct and appropriate billing for its services).  Thus, in order for PDSes to give users the degree of autonomy and independence from profiling, they would need to include privacy-enhancing technologies, such as IP anonymisers, user-agent randomisation and cookie blocking. This may be difficult or impossible to do on ``closed'' platforms such as iOS that prevent these techniques because they are perceived as ``hacking’’.
 
 % Agreed we need privacy as a challenge - not sure that as stated this doesn’t sound a bit technical. Not that technical is bad, but this is more of a big picture section. I’ll have a think about this and get back.
 
-Perhaps the ultimate set of challenges, however, pertain to accommodating change as it affects both the information itself and the practices and activities surrounding it, over the years that a PDSes is intended to operate.  Technologies that bring in new ways that data is used and generated seem to be introduced every quarter, placing new demands how this information needs to be accessed, created and used.  The most recent examples include wearable computing and ``always on'' wearable sensor technology, from simple devices such as Fitbits \footnote{Fitbits - \url{www.fitbit.com}} and Fuelbands\cite{Nike+ Fuelband - \url{www.nike.com/fuelband}} that unobtrusively but nearly constantly measure simple aspects of an individual's activity, to complex computational devices that can both deliver and capture information in high fidelity and quantity anywhere, such as Google Glass\footnote{Google Glass - \url{www.google.com/glass}}.  Such devices, as well as innovative new apps in can in some cases bring about changes in norms pertaining to people's activities, including the ways people think about technologies themselves.
+Perhaps the ultimate set of challenges, however, pertain to accommodating change as it affects both the information itself and the practices and activities surrounding it, over the years that a PDSes is intended to operate.  Technologies that bring in new ways that data is used and generated seem to be introduced every quarter, placing new demands how this information needs to be accessed, created and used.  The most recent examples include wearable computing and ``always on'' wearable sensor technology, from simple devices such as Fitbits \footnote{Fitbits - \url{www.fitbit.com}} and Fuelbands\footnote{Nike+ Fuelband - \url{www.nike.com/fuelband}} that unobtrusively but nearly constantly measure simple aspects of an individual's activity, to complex computational devices that can both deliver and capture information in high fidelity and quantity anywhere, such as Google Glass\footnote{Google Glass - \url{www.google.com/glass}}.  Such devices, as well as innovative new apps in can in some cases bring about changes in norms pertaining to people's activities, including the ways people think about technologies themselves.
 
 %% Maybe we should move the legal challenges down here??
 % Maybe - I’ve put something about durability in an earlier challenge, but I think that this is separate from the idea of longevity and durability. But the advantage of ending with this challenge is that it is in a sense the biggest, so I like it as it stands. We do need to make sure that this challenge is clearly distinct from the first two. I think it is, but maybe there’s a way of phrasing this that makes it clearer.
@@ -311,7 +351,7 @@ data.fm & FOSS RDF-based Web data store with linked data support
 
 The substantial challenges just described towards realising an actual PDS platform that achieves the goal set out in the introduction makes deriving a requirements specification daunting.  Such a specification would require a well-defined and limited set of capabilities, provided in sufficient detail to be realised in a software (or software-hardware system).  Yet, it is not clear how such a set of capabilities (out of many) should be chosen, nor how to choose a such a set to satisfy the requirement of minimality (to avoid overspecification).  Nor, finally, is it entirely clear how to verify whether any such set could reach its intended goal.
 
-Therefore we believe a research-centric, rather than development-driven, approach may be the most suitable for bridging the gap between the high-level challenges discussed and the evaluation of potential solutions.  Towards this end, we have begun a research project centred about a set of core questions for investigation, and an open experimental research PDS platform called INDX.
+Therefore we believe a research-centric, rather than development-driven, approach may be the most suitable for bridging the gap between the high-level challenges discussed and the evaluation of potential solutions.  Towards this end, we have begun a research project centred about a set of core questions for investigation, and an open experimental research PDS platform called INDX\footnote{ INDX source code and distributions - \url{http://indx.es} }.
 
 The purpose of INDX and the research efforts around it, are several; from a research coordination perspective, it aims to serve as a common ground where various research communities may identify interrelated issues.  This is a particularly critical role, as the kinds of work emerging from usable security, privacy, data durability, decentralised social systems, could both be informed by, and used to inform others about how approaches might fit into an integrated picture of future information management systems.
 
@@ -332,15 +372,13 @@ Since there are several advantages to using pre-existing databases, the most obv
 
 Therefore, using the age-old engineering principle of modularity, we sought to create the INDX PDS as an adapter on top of one or two basic underlying database systems.  This decision has enabled us to target multiple databases at the outset, ranging from desktops and servers to mobile devices. 
 
-The question of finding an appropriate data and query model for PDSes is a more delicate question because the precise choices made here are visible to, and thus will directly impact application developers, and even to a certain extent, end-users.  A variety of considerations need to be made when selecting the data model; first, whatever target model is chosen must be sufficiently flexible to accommodate (with reasonable transformation) the kinds of data that the platform will be managing.  A poorly suited data model for the target will likely introduce inefficiencies that will either slow down performance, increase complexity or both.
+The question of finding an appropriate data and query model for PDSes is a more delicate question because the design choices made at this level are visible to, and thus directly affect, application developers, and to a certain extent, end-users.  A variety of considerations need to be made when selecting the data model; first, whatever target model is chosen must be sufficiently flexible to accommodate (with reasonable transformation) the kinds of data that the platform will be managing.  A poorly suited data model for the target will likely introduce inefficiencies that will either slow down performance, increase complexity or both.
 
 Fortunately, most of the aforementioned data models are fairly general, each with specific characteristics; for example, relational databases require data to be factored into tables, which assumes a certain degree of data regularity; XML databases represent data as hierarchical structured documents; more general document-oriented stores manage collections of (either structured or unstructured) documents with limited metadata (comprising sets of keys for retrieval), while RDF ultimately represents data their granular components: triples.  
 
-Another dimension is that certain types of databases more typically afford guarantees that others do not; for example, many relational databases offer grades of ACID (Atomicity, Consistency, Isolation and Durability) guarantees, while few document-oriented or RDF triple stores do, partly due to technicalities arising from realising these guarantees in these settings.  Relational databases also typically afford predictable query performance and well-known methods to “tune” performance, such as ways to factoring tables to avoid expensive JOIN operations, or the use of indexes and so on, whereas such methods and query performance predictability is yet as well established for other types.
+Another dimension is that certain types of databases more typically afford guarantees that others do not; for example, many relational databases offer grades of ACID (Atomicity, Consistency, Isolation and Durability) guarantees \cite{muth1991atomic}, while few document-oriented or RDF triple stores do, partly due to technicalities arising from realising these guarantees in these settings.  An additional advantage to relational databases is that extensive research on them has yielded well-known methods to “tune” performance, such as ways to factor tables to avoid otherwise computationally expensive query operations, the creation of indexes and so on, whereas such methods and query performance predictability is remains less well established for other database types.
 
-The culmination of these observations, with the availability of an highly respected implementation have led us to target a relational database, Postgres, for desktop and server hosted INDX stores.  
-
-
+The culmination of these observations, with the availability of an highly respected implementation have led us to target a relational database, Postgres \cite{stonebraker1986design}, for desktop and server hosted INDX stores.  
 
 \subsubsection{Datastore Management}
 However, despite its large feature set, Postgres does not, ``out of the box’’ meet all of the capabilities required of a PDS by the definition we arrived upon earlier.  Given the need for PDSes to continue to meet changing information needs over an individual’s lifetime, it is rather unlikely that any database will ever be devised at any point in time that will be able to fulfill all future information needs itself.  Thus, this is where the design of the PDS has to provide incremental functionality extension, again, through encapsulation and modular design.
@@ -349,22 +387,38 @@ One of the immediate such functionality that must be added in order to use Postg
 
 A second example also relevant to long-term data retention was providing the capability of a revisitable history of all data objects kept in the store.  There are many uses for such a history, such as letting a user retrieve old versions of their objects, such as their documents, that were subsequently lost or altered, or determining how particular objects were changed over time.  Such capabilities have started to become available in commodity software such as Apple’s Time Machine, platforms such as Dropbox and Skydrive, as well as many collaborative software tools.  Thus, we believe that it such a capability will soon become a standard capability assumed by users.
 
-Other capabilities that are in the works for INDX include managing replicated copies (for enhanced resilience against datastore failure and corruption), sharing (such as object-level sharing support), and encryption for handling sensitive data.  Such platform-level data capability allows PDS platform application writers to take advantage of sophisticated functionality directly without having to implement them within apps, which allows for a consolidation in functionality.
+Other capabilities that in the works for INDX include managing replicated copies (for enhanced resilience against datastore failure and corruption), sharing (such as object-level sharing support), and encryption for handling sensitive data.  Such platform-level data capability allows PDS platform application writers to take advantage of sophisticated functionality and data security without having to implement them within apps themselves, allowing the unilateral improvement of data handling without adding application-wise complexity.
 
 An important piece of functionality that the PDS management logic also has to assume is to access control, which involves orchestration of at least three separate components: access control policies specified by the user and stored as rules,  the database’s own gatekeeping mechanisms for granting access to the data kept within, and digital identities of users and applications requesting access, described next.
 
 \subsubsection{Distributed Identity Management}
+The current predominant model of identity management is that service providers perform this management directly for users; for example, service providers allow users to create principals with them, and provide authentication mechanisms as well.  This model is inconvenient for a decentralised model of interaction, however, as it requires users to register a new principals with every single individual’s PDS prior to interacting with them.
 
+Distributed identity management protocols \cite{koshutanski2007distributed} offer a solution to this problem, by separating the problem of identity establishment and verification from its use.  This permits, for example, an individual to grant access to sensitive data in their PDS to a verifiable identity of an entity, for example, their GP, even if ther GP has never previously interacted with their PDS.  Currently popular distributed identity management implementations include OpenID\cite{openid}, WebID\cite{webid}, Mozilla Persona\cite{persona}.
+
+A related problem that is distinct to identity management is that of allowing third parties to request and securely receive access to data (with the user’s permission).  For this purpose, protocols such as OAuth\cite{oauth} and SAML\cite{saml} have been developed and implemented across a large number of data providers, including Facebook, Instagram, and others.  Such mechanisms allow these particular parties to continue to share data on behalf of the user once permission has been granted once, without subsequent user intervention.  
+
+INDX’s reference implementation uses OAuth in conjunction with OpenID to allow interoperability with current Web services, particularly for the purpose of permitting transparent archiving of content that users distribute across the Web.  It currently supports the archiving of content posted to social networking sites and services such as Twitter and Facebook, activity logging sites such as Nike+, Withings, and Moves,  financial tracking sites such as Mint, open data sources such as OpenWeatherAPI, with support for other services to follow.
+
+\section{Looking Forward: Functionality for Future Information Management}
+
+In this final section, we wish to reflect on potential ways that a PDS capability might change the ways individuals work through new apps that might be realised to take advantage of such a platform’s capabilities. In particular, we discuss new experiences and additional complementary technology that may be used to help users in their daily information management activities.
+
+\subsection{Semantic Technology}
+A significant challenge towards achieving an effective consolidated data model composed of data from external, heterogeneous third-party information sources and services is reconciling the representations used by these services to make them compatible, or at least comparable.  While the use of a single unified schema for all information coming into and out of a PDS would solve such a problem, it is fairly well accepted that achieving such a singular data representation is as unlikely as convincing the entire world to speak exactly one dialect of a single language; the degree of diversity and continued independent evolution of representations and languages practically guarantees that this will never happen\cite{}. 
+
+\subsection{``Placeless’’ Data}
 Marshall et al argue against a centralised data repository, because harvesting data into such a repository necessarily decontextualises it from the original service, application or Web site context in which it was created or found. instead to leave information distributed online in its place.  To allow this distributed data to be tracked and managed, “Metadata repository” 
 
-\section{Applications on PDSes}
+
+
 
 \subsection{Proactive support: Context-sensitivity and automation}
 Location based reminding apps, such as Checkmark \footnote{Checkmark - \url{itunes.apple.com/us/app/id524873453?mt=8}} have started to break out of aforementioned calendar-alarm to more adaptive reminding, by allowing alarms to be set sensitive to the user's automatically-sensed physical location.  While still very simple and potentially fallible, this approach highlights the potential for greater context-sensitive support for all of the various personal information activities.  
 
 Context-sensitive support is particularly attractive towards future PDS work as it seeks to apply automation to provide
 
-\subsection{Semantic Technology}
+\subsection{Preservation and Inter-generational Access}
 
 % \subsection{Towards a Requirements Analysis}
 
@@ -373,38 +427,10 @@ Context-sensitive support is particularly attractive towards future PDS work as 
 % This is challenging for a number of reasons; first, the above characterisations are considerably high-level.  Although examples can be generally identified for each, it may be difficult to extrapolate from specific examples a set of scoped design recommendations.
 
 % A second problem arises from the goal of long-term data management; since information can remain valuable for years or even generations, a central purpose of PDSes is to support the keeping and use of data over such durations.  While merely storing data for such timespans is challenging given the rapid pace of digital infrastructures, data formats and computing platforms, supporting its effective use over such a duration may be considerably more difficult, requiring consideration of how not only the information might change but its use as well.
-
-
-\subsection{Architecture}
-
-\subsection{Implementation}
-
-\section{Discussion}
-
-\subsection{Ownership and Value}
-
-\subsection{Data Licensing and Rights Management}
-
-\subsection{Time-resilient Data Formats}
-
-\subsection{Data Literacy}
+% \subsection{Architecture} \subsection{Implementation} \section{Discussion} \subsection{Ownership and Value} \subsection{Data Licensing and Rights Management} \subsection{Time-resilient Data Formats} \subsection{Data Literacy}
 
 \section{Conclusion}
 
-
-% Identifying the particular information forms to PDSes at any one moment involves enumerating all of the information forms commonly used, but also any that might be used in the future. 
-
-% This definition of information form relies 
-
-
-
-
-% \section{Scenarios: Benefits of PDSes}
-% \subsection{Consolidation rather than Fragmentation}
-% \begin{quote}
-% Anna has just two new year's resolutions this year: to start to save money towards her daughter's education, and to lose some weight as recommended by her physician.  To track her progress towards these goals, she uses many online tools; her credit and debit cards provide itemised descriptions of every purchase she makes, while her mobile phone tracks her movements, including any exercise she she performs, or whether she drives or takes public transport to work.
-% \end{quote}
-% \subsection{Preservation and Inter-generational Access}
 % \subsection{Context-Aware Computing}
 % access the family archive
 % URL and a secret key
