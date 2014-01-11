@@ -7,8 +7,10 @@ pds.pdf: pds.tex
 		sed s/”/\'\'/g pds-out.bib > pds-out2.bib
 		sed s/’/\'/g pds-out2.bib > pds-out3.bib
 		mv pds-out3.bib pds-unquoted.bib
-		bibtex pds
-		pdflatex pds-out3.tex
-		bibtex pds
-		pdflatex pds-out3.tex
-		mv pds-out3.pdf pds.pdf
+		mv pds-out3.tex pds-unquoted.tex
+		pdflatex pds-unquoted.tex
+		bibtex pds-unquoted
+		pdflatex pds-unquoted.tex
+		bibtex pds-unquoted
+		pdflatex pds-unquoted.tex
+		mv pds-unquoted.pdf pds.pdf
