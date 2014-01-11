@@ -247,23 +247,25 @@ The difficulties that this community has encountered have led us to reconsider, 
 
 \section{Survey of Online Data Platforms and Services}
 
-Given this characterisation of the various kinds of \emph{personal data} and activities around it, we can identify the ways that current online services fulfil the needs towards people's information types and activities.
+Given this characterisation of the various kinds of \emph{personal data} and activities around it, we can identify the ways that current online services fulfil the needs towards people's information types and activities.  
 
-Figure \ref{fig:cloudstorage} characterises the top five personal data cloud platorms by number of users. While Facebook may not be considered and end-user personal data storage provider of the likes of Dropbox, it remains one of the world's largest brokers of personal information.  Of particular interest is its introduction of Timeline in December 2011, when it started encouraging users to document the entire chronnology of their lives on the service, prompting users to backfill information about their lives from before they joined the platform through specific questions and prompts.  As a result, Facebook has quickly amassed one of the world's largest single collections of lifetime biographical information directly elicited from individuals.
+Figure \ref{fig:cloudstorage} lists the top five personal data cloud platforms by number of users. While Facebook may not be considered and end-user personal data storage provider of the likes of Dropbox, it remains one of the world's largest brokers of personal information.  Of particular interest is the introduction of its Timeline feature in December 2011, which took the format of a visual chronological lifelog starting at the individual’s birth.  In order to compel users to backfill information about their lives into their Timelines from before they joined Facebook, the platform introduced prompting questions, asking for information such as all of the places one has lived, one’s family members and favourite activities.  Somewhat surprisingly, the negative ``backlash’’  surrounding Timeline has been predominantly surrounding its aesthetic and usability \cite{mashable-timeline}, rather than its privacy intrusiveness, except among a small but vocal minority \cite{sophos-timeline}. This aggressive strategy, however, has succesfully driven millions of individuals to divulge rich histories of their lives with unprecedented fidelity.
 
-Facebook only the supports the storage of very specific information forms, spanning status updates, likes, photos, messages to individuals and so forth.  While Google Apps and iCloud support similar structured data entries such as calendar entries, all but iCloud support general file storage.  A survey of why people used these storage services revealed that while backup had previously been the main reason for using online cloud services, multi-device access and sharing/collaboration have quickly eclipsed backup for reasons people use such services online \cite{van2009note}. The primary use of Facebook, meanwhile is to stay connected with others, as well as several emotional reasons, spanning reasons of self-actualisation and to fulfill the need to belong \cite{nadkarni2012people}.
+Facebook only the supports the storage of very specific information forms, spanning status updates, likes, photos, messages to individuals and so forth.  Among the remaining services, Google Apps, Dropbox and Skydrive support general file storage, with the former two providing full versioning history support, while Skydrive providing versioning only for MS Office documents with a full paid Skydrive Pro membership\footnote{Skydrive Pro- \url{http://office.microsoft.com/en-001/office365-sharepoint-online-enterprise-help/manage-document-versions-in-skydrive-pro-HA103158256.aspx}}.  iCloud, meanwhile, in a move congruent to their push for their mobile devices to ‘render user-visible filesystems obsolete’,  does not support the general storage of files.  
+
+A survey of why people used the file-oriented storage services revealed that while backup had previously been the main reason for using online cloud services, multi-device access and sharing/collaboration have quickly eclipsed backup for reasons people use such services online \cite{van2009note}. The primary use of Facebook, meanwhile is to stay connected with others, as well as several emotional reasons, spanning reasons of self-actualisation and to fulfill the need to belong \cite{nadkarni2012people}.
 
 \begin{table}
-\begin{tabular}{p{2.2cm} p{8cm} l}
+\begin{tabular}{p{2.2cm} p{6.5cm} l}
+service & & data types\\
+\emph{Facebook} & Profile incl. Timeline; Friends; Events; Group memberships; Biographical history; States favourites; Preferences; Message archives; Liked pages, images, products; Places visited. & structured  \\
 
-\emph{Facebook} & Profile incl. Timeline; Friends; Events; Group memberships; Biographical history; States favourites; Preferences; Message archives; Liked pages, images, products; Places visited. & Free \\
+\emph{Google Drive} & Any files; Google Docs; calendar; G+ profile; identify and profiles of friends; search history; page access history; bookmarks; locations visited & both \\
 
-\emph{Google Apps and GDrive} & Any files; Google Docs; calendar; G+ profile; identify and profiles of friends; search history; page access history; bookmarks; locations visited & Freemium\\
+\emph{iCloud} & iWork Documents, Photos, Calendars, Passwords (Keychain) &  structured \\
+\emph{Dropbox} & Any files &fFiles \\
 
-\emph{Apple iCloud} & iWork Documents, Photos, Calendars, Passwords (Keychain) & Freemium \\
-Dropbox & Any files & Freemium \\
-
-\emph{Skydrive} & Office Documents; Any files. & Freemium \\
+\emph{Skydrive} & Office Documents; Any files. & files\\
 
 \end{tabular}
 \caption{Commercial third-party cloud storage offerings}
@@ -296,7 +298,7 @@ CalorieCounter; Fooducate & Daily calorie consumption & Manual \\
 \label{fig:aboutme}
 \end{table}
 
-While both categories of services broker significant amounts of data, these do not generally meet the requirements for personal data stores, as service providers ultimately control how this data is stored, secured, and have full access to its contents.  Other services, meanwhile have been launched ofcused on security of user data; a list of such services are listed in \ref{fig:pdsofferings} and are sometimes referred to as the first generation of ``personal data store'' offerings.
+While both categories of services broker significant amounts of data, these do not generally meet the requirements for personal data stores, as service providers ultimately remain in control how this data is stored, secured, and have full access to its contents.  Other services, meanwhile have been launched with their primary offering centered end-user privacy and control; a list of such services are listed in \ref{fig:pdsofferings} and are sometimes referred to as the first generation of ``personal data store'' offerings.
 
 \begin{table}
 \begin{tabular}{l p{8.5cm}}
@@ -307,8 +309,14 @@ Mydex & Cloud svc centered around specific structured data and identity verifica
 \label{fig:pdsofferingsp}
 \end{table}
 
+These offerings protect user data through encryption and by adhering to data handling standards; however, user data still physically resides in data centres operated by these service providers, and the providers still retain control over how the data is handled, and backed up and maintained.  Similarly, these services thus far are both highly restrictive on the kinds of information they are designed to manage, with support for a handful of different information types in specific schemas.
+
+A different approach that embraces a ``DIY” model \cite{diy-culture} for PDSes are software packages that people can install on their hardware devices of choice, in order to provide data management and security capabilities.  An example of such software packages are Figure~\ref{fig:selfhosted}.   While \emph{aerofs} and \emph{bittorrent sync} are proprietary commercial software packages, the remaining are released under libre, open source licenses~\cite{foss}. 
+
+The open source model provides a number of advantages in terms of realising PDSes.  First, these licenses allow these systems to be appropriated,  in whole or in parts, and mixed with other systems, in order to construct bespoke PDS functionalities in any ways seen fit.  It also encourages transparency by allowing anyone (and everyone) to consult, verify and improve its code, while at the same time making it difficult to hide malicious code within them, such a malware.  
+
 \begin{table}
-\begin{tabular}{l p{9cm} }
+\begin{tabular}{l p{9cm}}
 aerofs & Commercial solution for self-hosting a centralised dropbox-like service \\
 bittorrent sync & Commercial peer to peer file synchronisation software for personal computers \\
 gitannex &  FOSS Distributed file metadata maintenance system for advanced users \\ 
@@ -318,6 +326,8 @@ data.fm & FOSS RDF-based Web data store with linked data support
 \caption{Self hosted personal data platforms}
 \label{fig:selfhosted}
 \end{table}
+
+It is worth noting that while these DIY PDS platforms are largely platform and hardware agnostic, there are a number of hardware personal data archiving solutions for personal use, ranging from simple external hard drives, automatic-backup solutions that provide version histories, such as Apple’s Time Capsule\footnote{Apple Airport Time Capsule - \url{www.apple.com/airport-time-capsule/}} , NAS storage devices (e.g. WD MyClouds\footnote{WD MyCloud \url{www.wdc.com/en/products/network/networkstorage/}}), to systems that provide data resilience, access control and some degree of data security such as  \emph{Drobos}\footnote{Drobo - \url{www.drobo.com∫}}.  
 
 % \begin{table}
 % \begin{tabular}{l p{5cm} p{7cm} l l l } 
