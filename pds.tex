@@ -256,16 +256,15 @@ Facebook only the supports the storage of very specific information forms, spann
 A survey of why people used the file-oriented storage services revealed that while backup had previously been the main reason for using online cloud services, multi-device access and sharing/collaboration have quickly eclipsed backup for reasons people use such services online \cite{van2009note}. The primary use of Facebook, meanwhile is to stay connected with others, as well as several emotional reasons, spanning reasons of self-actualisation and to fulfill the need to belong \cite{nadkarni2012people}.
 
 \begin{table}
-\begin{tabular}{p{2.2cm} p{6.5cm} l}
-service & & data types\\
-\emph{Facebook} & Profile incl. Timeline; Friends; Events; Group memberships; Biographical history; States favourites; Preferences; Message archives; Liked pages, images, products; Places visited. & structured  \\
+\begin{tabular}{p{2.2cm} p{7cm}}
+\emph{Facebook} & Profile incl. Timeline; Friends; Events; Group memberships; Biographical history; States favourites; Preferences; Message archives; Liked pages, images, products; Places visited. \\
 
-\emph{Google Drive} & Any files; Google Docs; calendar; G+ profile; identify and profiles of friends; search history; page access history; bookmarks; locations visited & both \\
+\emph{Google Drive} & Any files; Google Docs; calendar; G+ profile; identify and profiles of friends; search history; page access history; bookmarks; locations visited \\
 
-\emph{iCloud} & iWork Documents, Photos, Calendars, Passwords (Keychain) &  structured \\
-\emph{Dropbox} & Any files & files \\
+\emph{iCloud} & iWork Documents, Photos, Calendars, Passwords (Keychain) \\
+\emph{Dropbox} & Any files \\
 
-\emph{Skydrive} & Office Documents; Any files. & files\\
+\emph{Skydrive} & Office Documents; Any files. \\
 
 \end{tabular}
 \caption{Commercial third-party cloud storage offerings}
@@ -275,24 +274,19 @@ service & & data types\\
 However, these services primarily pertain to the management of a fraction of the personal data encompassed by Jones's definition above, specifically ``data owned/controlled by me''.  If we also extend consideration to online services that host and collect ``data about me'' as well, there are now an increasing number of sensor-driven apps and services that facilitate the tracking of various, routine aspects of everyday life activities, spanning purchases, movements, wellbeing vital statistics; we list such life tracking sites in Figure \ref{aboutme}.
 
 \begin{table}
-\begin{tabular}{p{2cm} p{6.1cm} p{2.54cm}}
+\begin{tabular}{p{3cm} p{4.5cm} p{2.54cm}}
 Service & Description & Logging Method \\
 \hline
-Foursquare & Visits made to points of interest & Manual check-ins \\
-\hline
-Moves & Complete history of a person's movements throughout the day as recorded from smartphone app  & Sensed via smartphone app \\ 
-\hline
-Mint & Access to personal banking records (tracking spending) & Automatic \\
-\hline
-Withings; Runkeeper & Access to weight, blood pressure, heart rate & Semi-automatic\\
-\hline
-Fitbit; Fuelband; Jawbone & Daily activity levels & Sensed via worn sensor \\ 
-\hline
-Wattvision; Stepgreen & Energy consumption & Automatic (service provider) \\
-\hline
-Moodpanda; Mappiness; Gotafeeling & Mood & Experience Sampled \\
-\hline
-CalorieCounter; Fooducate & Daily calorie consumption & Manual \\
+\emph{Foursquare, FB Places} & Visits made to points of interest & Manual check-ins \\
+\emph{Moves} & Complete history of a person's movements throughout the day as recorded from smartphone app  & Sensed via mobile \\ 
+\emph{Mint, BUDGT} & Access to personal banking records (tracking spending) & Sensed\\
+\emph{Withings} & Weight, blood pressure,& Sensed \\
+\emph{Garmin HRM; Polar HRM; Cardiio App} & Heart rate over time & Sensed \\
+\emph{Zensorium Tinke} & Blood volume pulse, stress markers & Manual measurement \\
+\emph{Fitbit; Fuelband; Jawbone} & Daily activity levels & Sensed \\ 
+\emph{Wattvision; Stepgreen} & Energy consumption & Sensed \\
+\emph{Moodpanda; Mappiness; Gotafeeling} & Mood/emotion/stress & Experience Sampled \\
+\emph{CalorieCounter; Fooducate} & Daily calorie consumption & Manual \\
 \end{tabular}
 \caption{Web lifelogging services that facilitate the capture and logging of everyday life experiences. }
 \label{fig:aboutme}
@@ -302,14 +296,14 @@ While both categories of services broker significant amounts of data, these do n
 
 \begin{table}
 \begin{tabular}{l p{8.5cm}}
-Personal.com & Cloud svc for keeping important structured data of specific schema types (passwords, contact details)  \\
-Mydex & Cloud svc centered around specific structured data and identity verification  \\
+\emph{Personal.com} & Cloud svc for keeping important structured data of specific schema types (passwords, contact details)  \\
+\emph{Mydex} & Cloud svc centered around specific structured data and identity verification  \\
 \end{tabular}
 \caption{Personal Data Store offerings which encrypt data to provide a high degree of user data security, e.g., only the user has access.}
 \label{fig:pdsofferingsp}
 \end{table}
 
-These offerings protect user data through encryption and by adhering to data handling standards; however, user data still physically resides in data centres operated by these service providers, and the providers still retain control over how the data is handled, and backed up and maintained.  Similarly, these services thus far are both highly restrictive on the kinds of information they are designed to manage, with support for a handful of different information types in specific schemas.
+These offerings protect user data through encryption and by adhering to data handling standards; however, user data still physically reside in data centres operated by these service providers, where they ultimately remain under their control.  Similarly, these services thus far are both highly restrictive on the kinds of information they are designed to manage, with support for a handful of different information types in specific schemas.
 
 A different approach that embraces a ``DIY” model \cite{diy-culture} for PDSes are software packages that people can install on their hardware devices of choice, in order to provide data management and security capabilities.  An example of such software packages are Figure~\ref{fig:selfhosted}.   While \emph{aerofs} and \emph{bittorrent sync} are proprietary commercial software packages, the remaining are released under libre, open source licenses~\cite{foss}. 
 
@@ -317,11 +311,11 @@ The open source model provides a number of advantages in terms of realising PDSe
 
 \begin{table}
 \begin{tabular}{l p{9cm}}
-aerofs & Commercial solution for self-hosting a centralised dropbox-like service \\
-bittorrent sync & Commercial peer to peer file synchronisation software for personal computers \\
-gitannex &  FOSS Distributed file metadata maintenance system for advanced users \\ 
-cosicloud & FOSS self-hosted cloud platform for plug computers offering mail, photo, contact and metadata hosting and storage \\
-data.fm & FOSS RDF-based Web data store with linked data support
+\emph{aerofs} & Commercial solution for self-hosting a centralised dropbox-like service \\
+\emph{bittorrent sync} & Commercial peer to peer file synchronisation software for personal computers \\
+\emph{gitannex} &  FOSS Distributed file metadata maintenance system for advanced users \\ 
+\emph{cosicloud} & FOSS self-hosted cloud platform for plug computers offering mail, photo, contact and metadata hosting and storage \\
+\emph{data.fm} & FOSS RDF-based Web data store with linked data suport
 \end{tabular}
 \caption{Self hosted personal data platforms}
 \label{fig:selfhosted}
@@ -354,6 +348,14 @@ It is worth noting that while these DIY PDS platforms are largely platform and h
 % \caption{Personal backup devices}
 % \label{fig:se}
 % \end{table}
+
+In terms of support for the kinds of aforementioned PIM activities, these examples demonstrate that the majority of personal data services have thus far focused on prioritising data durability and multi-device data access.  Beyond data backup, a few provide full data versioning, and some offer data security guarantees as well. 
+
+Sharing is another kind of support that is central to all of these services, reflecting their common roots in social “Web 2.0”  services.  This comes in terms of real-time collaboration for some (e.g.,, Google Drive and Skydrive), while nearly all of the cloud and DIY platforms above  provide some support for asynchronous collaboration, including disconnected operation (e.g., Dropbox Google Drive, Skydrive, gitannex).
+
+The specific approaches taken to supporting PIM activities also vary considerably; some have bundled application front-ends, or sets of application utilities``baked’’ into them (such as Google Drive and WD MyCloud), while others simply function as generic storage containers for existing applications (e.g., Dropbox and gitannex).  Still others stand  as their own platforms for future PIM apps and services (e.g. cosicloud).  Two trends are clear, however; first, that the commercial ‘centralised’ cloud offerings currently outpace the self-hosted options in terms of features and lowest immediate visible cost, both in terms of subscription costs (due to the pervasive freemium models) and in terms of time and effort to set up and use.  In terms of long-term costs, however, the advantages of provider-hosting are less clear; the DIY approaches promise much greater flexibility by facilitating the creation of re-appropriable, custom-tailorable PIM solutions.  Moreover, since self-hosted solutions place the ultimate responsibility on the user for the maintenance of his or her data, they provide much greater potential for long term data durability and security.  
+
+Based on this perceived disparity between cloud-hosted and DIY solutions, we organised an open source community effort around identifying and realising advanced PIM support in self-hosted, DIY platforms.  The goal of this effort was to identify how to realise a system that would overcome the barriers to using self-hosted platforms while leveraging its benefits; specifically supporting research questions on how to better support users’ long-term data retention and management needs.
 
 \section{INDX: A Research Programme Around Personal Data Stores}
 
